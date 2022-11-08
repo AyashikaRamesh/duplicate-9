@@ -1,0 +1,15 @@
+apiVersion: webhookconfig.keptn.sh/v1beta1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.triggered
+      requests:
+        - url: https://4fde447a-c66f-4937-aa2f-1f48203f6f75.mock.pstmn.io/redirect
+          payload: ""
+          headers: []
+          method: GET
+      subscriptionID: 1f0080fc-0a21-4feb-b711-470cdefafd38
+      sendFinished: true
+      sendStarted: true
